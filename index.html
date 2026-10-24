@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Graduation, My Everything! 🎓💖</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Hearts Container -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- HALAMAN 1: HERO / PEMBUKA -->
+    <section class="page active" id="page-1">
+        <div class="hero-content">
+            <div class="badge-glow">🎓 Graduation Day Celebration ✨</div>
+            <h1 class="romantic-title">Happy Graduation,<br><span class="highlight">My Love</span> ❤️</h1>
+            <p class="subtitle">Hari kebanggaan ini akhirnya tiba. Kamu hebat karena sudah berjuang melewati semuanya dengan luar biasa!</p>
+            
+            <button class="btn-romantic" onclick="goToPage(2)">
+                <i class="fa-solid fa-heart"></i> Lihat Galeri Foto 📸
+            </button>
+        </div>
+    </section>
+
+    <!-- HALAMAN 2: GALERI FOTO (KATA-KATA DIPERBAIKI) -->
+    <section class="page" id="page-2">
+        <div class="section-header">
+            <span class="sub-title">Moments to Remember</span>
+            <h2 class="section-title">Galeri Indahmu 📸</h2>
+        </div>
+        
+        <div class="gallery-slider">
+            <!-- Foto 1 -->
+            <div class="card-glass">
+                <img src="images/foto1.jpg" alt="Momen 1" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500'">
+                <p>Di balik lelah dan penatmu, selalu ada tekad kuat yang tidak pernah padam.</p>
+            </div>
+            <!-- Foto 2 -->
+            <div class="card-glass">
+                <img src="images/foto2.jpg" alt="Momen 2" onerror="this.src='https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500'">
+                <p>Senyuman terindah setelah kerja kerasmu terbayar tuntas hari ini.</p>
+            </div>
+            <!-- Foto 3 -->
+            <div class="card-glass">
+                <img src="images/foto3.jpg" alt="Momen 3" onerror="this.src='https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=500'">
+                <p>Cantik, cerdas, dan siap menyongsong masa depan yang gemilang.</p>
+            </div>
+        </div>
+
+        <div class="nav-buttons">
+            <button class="btn-sub" onclick="goToPage(1)"><i class="fa-solid fa-arrow-left"></i> Kembali</button>
+            <button class="btn-romantic" onclick="goToPage(3)">Buka Surat Cinta 💌</button>
+        </div>
+    </section>
+
+    <!-- HALAMAN 3: AMPLOP SURAT CINTA (KATA-KATA DISESUAIKAN) -->
+    <section class="page" id="page-3">
+        <div class="envelope-wrapper" id="envelopeWrapper" onclick="openEnvelope()">
+            <div class="envelope">
+                <div class="front flap"></div>
+                <div class="front pocket"></div>
+                <div class="letter">
+                    <h2 class="letter-title">Untuk Kamu,</h2>
+                    <p>Selamat ya atas kelulusan dan gelar barumu! Aku tahu perjalanan untuk sampai di titik ini sama sekali tidak mudah dan penuh perjuangan.</p>
+                    <p>Meskipun aku tidak bisa menemanimu secara langsung di setiap detik proses tugas akhirmu, aku selalu mendoakan yang terbaik dari kejauhan.</p>
+                    <p>Aku sangat bangga melihat betapa mandiri dan tangguhnya kamu. Semoga ilmu yang didapat berkah dan sukses selalu untuk langkah ke depannya! ❤️</p>
+                </div>
+            </div>
+        </div>
+        <p class="click-hint" id="hintText"><i class="fa-solid fa-hand-pointer"></i> Klik amplop untuk membaca surat</p>
+        
+        <button class="btn-sub btn-back-letter" onclick="goToPage(2)"><i class="fa-solid fa-arrow-left"></i> Kembali ke Galeri</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
